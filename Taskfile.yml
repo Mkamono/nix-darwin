@@ -2,11 +2,11 @@ version: "3"
 
 env:
   DEFAULT_BRANCH:
-    sh: git branch -l | cut -d ' ' -f 2 | tr -d '\n'
+    sh: git remote show origin | grep 'HEAD branch' | awk '{print $NF}'
 
 tasks:
   gd:
     cmds:
-      - git pull --prune
+      - git fetch --prune
       - echo "Default branch is $DEFAULT_BRANCH"
-      - echo "test"
+      - git branch | grep -v $DEFAULT_BRANCH | xargs git branch -D
