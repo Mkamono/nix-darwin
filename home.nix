@@ -33,6 +33,17 @@ in {
         "export WORKING_DIR=$(pwd); cd ${taskDir}; task pgr; cd - > /dev/null";
       rebuild-darwin =
         "export WORKING_DIR=$(pwd); cd ${taskDir}; task rebuild-darwin; cd - > /dev/null";
+      brew-init = ''
+        brew install --cask \
+                battery \
+                jordanbaird-ice \
+                raycast \
+                warp \
+                docker \
+                google-chrome \
+                meetingbar \
+                scroll-reverser
+      '';
     };
   };
 }
