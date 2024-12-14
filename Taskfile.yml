@@ -7,4 +7,5 @@ env:
 tasks:
   gd:
     cmds:
+      - git pull --prune
       - echo "Default branch is $DEFAULT_BRANCH"
