@@ -6,6 +6,7 @@ env:
 
 tasks:
   gd:
+    silent: true
     cmds:
       - git fetch --prune
-      - git branch | grep -v $DEFAULT_BRANCH | grep -v "^ \*" | xargs git branch -D
+      - git branch | grep -v $DEFAULT_BRANCH | grep -v "^\*.*" | xargs git branch -D
