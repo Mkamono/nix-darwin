@@ -8,5 +8,4 @@ tasks:
   gd:
     cmds:
       - git fetch --prune
-      - echo "Default branch is $DEFAULT_BRANCH"
-      - git branch | grep -v $DEFAULT_BRANCH | xargs git branch -D
+      - git branch | grep -v $DEFAULT_BRANCH | grep -v "^ \*" | xargs git branch -D
