@@ -9,3 +9,4 @@ tasks:
     cmds:
       - git pull --prune
       - echo "Default branch is $DEFAULT_BRANCH"
+      - echo "test"
