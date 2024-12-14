@@ -63,27 +63,4 @@
     # アプリケーション起動時のアニメーションを無効化: falseにすると、起動アニメーションが表示されなくなります。
     launchanim = false;
   };
-
-  homebrew = {
-    enable = true;
-    # onActivation = {
-    #   # autoUpdate = true;
-    #   # !! 注意 !!
-    #   # cleanup = "uninstall";
-    # };
-    # casks = [
-    #   # ここにGUIアプリの記述
-    #   # "sublime-text"
-    # ];
-  };
 }
-
-# ==> Formulae
-# ca-certificates go-task         libssh2         mpdecimal       python@3.11     sqlite
-# eza             libgit2         mas             openssl@3       readline        xz
-
-# ==> Casks
-# android-messages        discord                 google-drive            logi-options+           notion                  readdle-spark           visual-studio-code
-# arc                     docker                  jordanbaird-ice         logi-options-plus       obsidian                scroll-reverser         warp
-# battery                 google-chrome           karabiner-elements      meetingbar              raindropio              spotify                 zoom
-# brave-browser           google-cloud-sdk        kindle                  monitorcontrol          raycast                 steam

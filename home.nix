@@ -1,6 +1,12 @@
 # home manager configuration
 { config, lib, pkgs, ... }: {
-  home.packages = with pkgs; [ fzf bottom hadolint go-task ];
+  home.packages = with pkgs; [
+    bottom
+    hadolint
+    go-task
+    google-cloud-sdk
+    terraform
+  ];
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;

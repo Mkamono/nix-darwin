@@ -19,7 +19,7 @@
       };
     in {
       darwinConfigurations.${user.host} = darwin.lib.darwinSystem {
-        system = "aarch64-darwin";
+        system = "x86_64-darwin";
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
