@@ -6,13 +6,27 @@ env:
 
 tasks:
   gd:
+    dir: $WORKING_DIR
     silent: true
     cmds:
       - git fetch --prune
       - git branch | grep -v $DEFAULT_BRANCH | grep -v "^\*.*" | xargs git branch -D
+    requires:
+      vars:
+        - WORKING_DIR
 
   gpr:
+    dir: $WORKING_DIR
     silent: true
     cmds:
       - git pull --rebase origin main
     prompt: "Do you want to continue?"
+
+  rebuild-darwin:
+    cmds:
+      - darwin-rebuild switch --flake ~/.config/nix-darwin --impure
+    env:
+      DARWIN_USER:
+        sh: whoami
+      DARWIN_HOST:
+        sh: hostname -s

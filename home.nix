@@ -1,5 +1,7 @@
 # home manager configuration
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, ... }:
+let taskDir = "~/.config/nix-darwin";
+in {
   home.packages = with pkgs; [
     bottom
     hadolint
@@ -25,7 +27,12 @@
       la = "ls -la";
       dc = "docker compose";
       tf = "terraform";
-      gd = "task gd";
+      gd =
+        "export WORKING_DIR=$(pwd); cd ${taskDir}; task gd; cd - > /dev/null";
+      pgr =
+        "export WORKING_DIR=$(pwd); cd ${taskDir}; task pgr; cd - > /dev/null";
+      rebuild-darwin =
+        "export WORKING_DIR=$(pwd); cd ${taskDir}; task rebuild-darwin; cd - > /dev/null";
     };
   };
 }
