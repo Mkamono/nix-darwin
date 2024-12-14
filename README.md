@@ -26,3 +26,5 @@ nix command, flakeが無効化されるので、`experimental-features = nix-com
 
 
 https://search.nixos.org/packages
+
+https://rycee.gitlab.io/home-manager/options.xhtml

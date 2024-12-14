@@ -1,0 +1,10 @@
+version: "3"
+
+env:
+  DEFAULT_BRANCH:
+    sh: git branch -l | cut -d ' ' -f 2 | tr -d '\n'
+
+tasks:
+  gd:
+    cmds:
+      - echo "Default branch is $DEFAULT_BRANCH"

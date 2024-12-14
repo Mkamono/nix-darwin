@@ -6,6 +6,7 @@
     go-task
     google-cloud-sdk
     terraform
+    gh
   ];
   home.stateVersion = "24.11";
 
@@ -15,5 +16,16 @@
     enable = true;
     userEmail = "chengyaye31@gmail.com";
     userName = "Mkamono";
+  };
+
+  programs.zsh = {
+    enable = true;
+    shellAliases = {
+      ll = "ls -l";
+      la = "ls -la";
+      dc = "docker compose";
+      tf = "terraform";
+      gd = "task gd";
+    };
   };
 }

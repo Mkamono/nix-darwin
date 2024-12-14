@@ -11,9 +11,6 @@
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
 
-  # zshの設定
-  programs.zsh.enable = true;
-
   # 非自由パッケージを許可
   nixpkgs.config.allowUnfree = true;
 
